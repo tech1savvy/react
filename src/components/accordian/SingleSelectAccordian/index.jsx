@@ -1,14 +1,13 @@
-// single selection
-// multiple selection
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "./data.js";
 import "./styles.css";
 
-export default function Accordian() {
+// add rotation to the expand icon
+
+export default function SingleSelectAccordian() {
   const [selected, setSelected] = useState(null);
 
-  function handleSingleSelection(currentId) {
+  function handleClick(currentId) {
     setSelected(currentId === selected ? null : currentId);
   }
 
@@ -19,17 +18,14 @@ export default function Accordian() {
       <div className="accordian">
         {data && data.length > 0 ? (
           data.map((item) => (
-            <div className="item">
-              <div
-                onClick={() => handleSingleSelection(item.id)}
-                className="cover"
-              >
-                <h3 key={item}>{item.cover}</h3>
+            <div className="item" key={item.id}>
+              <div onClick={() => handleClick(item.id)} className="cover">
+                <h3>{item.cover}</h3>
                 <span id="expand">+</span>
               </div>
-              {selected === item.id ? (
+              {selected === item.id && (
                 <div className="content">{item.content}</div>
-              ) : null}
+              )}
             </div>
           ))
         ) : (

@@ -6,14 +6,11 @@ export default function MultiSelectAccordian() {
   const [selected, setSelected] = useState([]);
 
   function handleClick(currentId) {
-    let cpySelected = [...selected];
-    const indexOfCurrentId = cpySelected.indexOf(currentId);
-    console.log(indexOfCurrentId);
-
-    if (indexOfCurrentId === -1) cpySelected.push(currentId);
-    else cpySelected.splice(indexOfCurrentId, 1);
-
-    setSelected(cpySelected);
+    setSelected((prevSelected) =>
+      prevSelected.includes(currentId)
+        ? prevSelected.filter((id) => id !== currentId)
+        : [...prevSelected, currentId]
+    );
   }
 
   console.log(selected);
@@ -22,14 +19,14 @@ export default function MultiSelectAccordian() {
     <div className="wrapper">
       <div className="accordian">
         {data && data.length > 0 ? (
-          data.map((item) => (
-            <div className="item" key={item.id}>
-              <div onClick={() => handleClick(item.id)} className="cover">
-                <h3>{item.cover}</h3>
+          data.map(({ id, cover, content }) => (
+            <div className="item" key={id}>
+              <div onClick={() => handleClick(id)} className="cover">
+                <h3>{cover}</h3>
                 <span id="expand">+</span>
               </div>
-              {selected.includes(item.id) && (
-                <div className="content">{item.content}</div>
+              {selected.includes(id) && (
+                <div className="content">{content}</div>
               )}
             </div>
           ))

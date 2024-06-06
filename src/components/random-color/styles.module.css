@@ -1,0 +1,12 @@
+.wrapper {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* above is wrong. learn how to center */
+}
+
+.btn {
+  background: #614101;
+  padding: 10px;
+}

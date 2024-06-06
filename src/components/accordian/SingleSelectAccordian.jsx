@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data.js";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 // add rotation to the expand icon
 
@@ -14,16 +14,18 @@ export default function SingleSelectAccordian() {
   console.log(selected);
 
   return (
-    <div className="wrapper">
-      <div className="accordian">
+    <div className={styles.wrapper}>
+      <div className={styles.accordian}>
         {data && data.length > 0 ? (
           data.map(({ id, cover, content }) => (
-            <div className="item" key={id}>
-              <div onClick={() => handleClick(id)} className="cover">
+            <div className={styles.item} key={id}>
+              <div onClick={() => handleClick(id)} className={styles.cover}>
                 <h3>{cover}</h3>
-                <span id="expand">+</span>
+                <span>+</span>
               </div>
-              {selected === id && <div className="content">{content}</div>}
+              {selected === id && (
+                <div className={styles.content}>{content}</div>
+              )}
             </div>
           ))
         ) : (

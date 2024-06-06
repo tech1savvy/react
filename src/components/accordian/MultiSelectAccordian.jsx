@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data.js";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export default function MultiSelectAccordian() {
   const [selected, setSelected] = useState([]);
@@ -16,17 +16,17 @@ export default function MultiSelectAccordian() {
   console.log(selected);
 
   return (
-    <div className="wrapper">
-      <div className="accordian">
+    <div className={styles.wrapper}>
+      <div className={styles.accordian}>
         {data && data.length > 0 ? (
           data.map(({ id, cover, content }) => (
-            <div className="item" key={id}>
-              <div onClick={() => handleClick(id)} className="cover">
+            <div className={styles.item} key={id}>
+              <div onClick={() => handleClick(id)} className={styles.cover}>
                 <h3>{cover}</h3>
-                <span id="expand">+</span>
+                <span>+</span>
               </div>
               {selected.includes(id) && (
-                <div className="content">{content}</div>
+                <div className={styles.content}>{content}</div>
               )}
             </div>
           ))

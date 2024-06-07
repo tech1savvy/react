@@ -1,4 +1,6 @@
 :root {
-  color: #fcebcd;
-  background-color: #171613;
+  --black: #171613;
+  --white: #fcebcd;
+  color: var(--white);
+  background-color: var(--black);
 }

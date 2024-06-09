@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3px;
+}
+
+.active {
+  color: goldenrod;
+}
+
+.inactive {
+  color: grey;
+}

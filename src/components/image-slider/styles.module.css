@@ -1,0 +1,57 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+}
+
+.currentImage {
+  display: block;
+
+  border-radius: 15px;
+  box-shadow: 0px 0px 3px var(--white);
+  width: 100%;
+}
+
+.hiddenImage {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  color: var(--white);
+}
+
+.arrowLeft {
+  left: 1rem;
+}
+
+.arrowRight {
+  right: 1rem;
+}
+
+.indicatorsContainer {
+  position: absolute;
+  display: flex;
+  bottom: 1rem;
+}
+
+.indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+
+  cursor: pointer;
+}
+
+.activeIndicator {
+  background-color: var(--white);
+}
+
+.inactiveIndicator {
+  background-color: gray;
+}

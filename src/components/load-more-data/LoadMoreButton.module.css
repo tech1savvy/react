@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: var(--black);
+}
+
+.itemContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.item {
+  padding: 20px;
+  border: solid var(--white) 1px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemThumbnail {
+  width: 200px;
+  height: 200px;
+}

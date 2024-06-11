@@ -1,10 +1,11 @@
 import "./App.css";
-import LoadMoreButton from "./components/load-more-data/LoadMoreButton.jsx";
+import menus from "./components/navigation-menu/MenuData";
+import TreeViewMenu from "./components/navigation-menu/TreeViewMenu";
 
 function App() {
   return (
     <>
-      <LoadMoreButton />
+      <TreeViewMenu menus={menus} />
     </>
   );
 }

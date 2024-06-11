@@ -7,3 +7,10 @@
 - [Rating](src/components/rating/StarRating.jsx)
 - [Image Slider](src/components/image-slider/ImageSlider.jsx): fetches images from api
 - [Load More Button](src/components/load-more-data/LoadMoreButton.jsx) : fetches data from api
+- [Tree View Navigation Menu](/src/components/navigation-menu): recrusively calling a component
+
+---
+
+> Resources that helped me build this collection
+
+- 1: [25 ReactJS Intervie Projects by Sangam Mukherjee](https://www.youtube.com/watch?v=5ZdHfJVAY-s&t=6028s&pp=ygUVZnJlZWNvZGVjYW1wIDI1IHJlYWN0)

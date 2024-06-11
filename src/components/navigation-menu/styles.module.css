@@ -1,0 +1,17 @@
+.treeViewMenuContainer {
+  min-height: 100vh;
+  width: 350px;
+  background: grey;
+}
+
+.menuListContainer {
+  list-style: none;
+  margin: 0px auto 0px auto;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}

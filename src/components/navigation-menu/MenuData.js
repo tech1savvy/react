@@ -8,7 +8,7 @@ export const menus = [
     to: "/profile",
     children: [
       {
-        label: "Details",
+        label: "Address",
         to: "details",
         children: [
           {
@@ -20,6 +20,20 @@ export const menus = [
                 to: "city",
               },
             ],
+          },
+        ],
+      },
+      {
+        label: "Contact",
+        to: "contact",
+        children: [
+          {
+            label: "Phone",
+            to: "phone",
+          },
+          {
+            label: "Mail",
+            to: "mail",
           },
         ],
       },
@@ -44,12 +58,6 @@ export const menus = [
           {
             label: "Register",
             to: "register",
-            children: [
-              {
-                label: "Random data",
-                to: "",
-              },
-            ],
           },
         ],
       },

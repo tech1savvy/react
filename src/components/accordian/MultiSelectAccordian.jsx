@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "./data.js";
+import data from "./AccordianData.js";
 import styles from "./styles.module.css";
 
 export default function MultiSelectAccordian() {

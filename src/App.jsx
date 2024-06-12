@@ -1,11 +1,10 @@
 import "./App.css";
-import menus from "./components/navigation-menu/MenuData";
-import TreeViewMenu from "./components/navigation-menu/TreeViewMenu";
+import QRCodeGenerator from "./components/qr-code-generator/QRCodeGenerator";
 
 function App() {
   return (
     <>
-      <TreeViewMenu menus={menus} />
+      <QRCodeGenerator />
     </>
   );
 }

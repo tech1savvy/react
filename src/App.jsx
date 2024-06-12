@@ -1,10 +1,10 @@
 import "./App.css";
-import QRCodeGenerator from "./components/qr-code-generator/QRCodeGenerator";
+import ThemeSwitch from "./components/theme-switcher/ThemeSwitch.jsx";
 
 function App() {
   return (
     <>
-      <QRCodeGenerator />
+      <ThemeSwitch />
     </>
   );
 }

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import data from "./AccordianData.js";
+import data from "./AccordionData.js";
 import styles from "./styles.module.css";
 
 // add rotation to the expand icon
 
-export default function SingleSelectAccordian() {
+export default function SingleSelectAccordion() {
   const [selected, setSelected] = useState(null);
 
   function handleClick(currentId) {
@@ -15,7 +15,7 @@ export default function SingleSelectAccordian() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.accordian}>
+      <div className={styles.accordion}>
         {data && data.length > 0 ? (
           data.map(({ id, cover, content }) => (
             <div className={styles.item} key={id}>

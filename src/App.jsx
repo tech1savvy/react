@@ -1,10 +1,10 @@
 import "./App.css";
-import UseReducerWithUseContext from "./concepts/built-in-hooks/additonal/UseReducerWithUseContext";
+import HelloWorld from "./components/HelloWorld";
 
 function App() {
   return (
     <>
-      <UseReducerWithUseContext />
+      <HelloWorld />
     </>
   );
 }

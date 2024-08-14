@@ -1,8 +1,8 @@
 import { useState } from "react";
-import data from "./AccordianData.js";
+import data from "./AccordionData.js";
 import styles from "./styles.module.css";
 
-export default function MultiSelectAccordian() {
+export default function MultiSelectAccordion() {
   const [selected, setSelected] = useState([]);
 
   function handleClick(currentId) {
@@ -17,7 +17,7 @@ export default function MultiSelectAccordian() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.accordian}>
+      <div className={styles.accordion}>
         {data && data.length > 0 ? (
           data.map(({ id, cover, content }) => (
             <div className={styles.item} key={id}>
